@@ -1,4 +1,4 @@
-# generator-drupal-theme [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status]]
+# generator-drupal-theme
 
 > Generates custom Webpack-based themes for Drupal 8
 
@@ -33,7 +33,7 @@ npm start
 ```
 
 ## Building
-After development, build the JS
+After development, build the JS bundle
 ```bash
 npm run-script build
 ```
