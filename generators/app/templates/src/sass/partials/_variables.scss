@@ -1,0 +1,46 @@
+/**
+ * VARIABLES
+ * Table of contents: Navigate using $TITLE
+ *
+ * general
+ *
+ */
+
+/*------------------------------------**
+  $GENERAL
+**------------------------------------*/
+
+// Colours
+
+$accent: #28b1ab;
+$accent-light: rgba($accent, 0.2);
+$accent-dark: darken($accent, 8);
+
+$success: #79ba00;
+$success-light: rgba($success, 0.4);
+$warning: #f7803a;
+$warning-light: rgba($warning, 0.4);
+$error: #ff3f22;
+$error-light: rgba($error, 0.4);
+
+$grey: #f4f4f4;
+$black: #000;
+$white: #fff;
+
+$text: #333333;
+$headings: $black;
+$text-light: #979797;
+
+// Fonts/typography
+
+$font: "Roboto Regular", sans-serif;
+$font-alt: "Roboto Light", sans-serif;
+$font-alt-bold: "Roboto Medium", sans-serif;
+
+$book: 400;
+$bold: 700;
+
+// Containers
+
+$max-width: 1175px;
+$wrapper-width: 1175px;

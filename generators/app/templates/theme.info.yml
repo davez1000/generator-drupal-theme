@@ -1,0 +1,14 @@
+name: <%= name %>
+type: theme
+description: A custom theme for the <%= name %> project
+package: Other
+core: 8.x
+libraries:
+  - <%= sanitizedName %>/global-styling
+
+base theme: stable
+
+regions:
+  header: Header
+  content: Content
+  footer: Footer

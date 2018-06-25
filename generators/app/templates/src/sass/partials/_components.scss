@@ -1,0 +1,168 @@
+/**
+ * ELEMENTS
+ * Table of contents: Navigate using $TITLE
+ *
+ * page navigation
+ * breadcrumb
+ * buttons
+ * pagination
+ *
+ */
+
+
+
+
+
+/*------------------------------------**
+  $PAGE NAVIGATION
+**------------------------------------*/
+
+.page-navigation {
+
+  li:before {
+    display: none;
+  }
+
+  li {
+    border-bottom: 1px solid $text-light;
+    margin-bottom: 0;
+  }
+
+  li:last-child {
+    border-bottom: 0;
+  }
+
+  a {
+    display: block;
+    padding: 1.1rem 0 0.8rem 0;
+    color: $text;
+    font-family: $font-alt;
+    text-transform: uppercase;
+  }
+
+  a:hover {
+    color: $accent;
+  }
+
+}
+
+
+
+
+
+/*------------------------------------**
+  $BREADCRUMB
+**------------------------------------*/
+
+.breadcrumb {
+  @include font-size(16);
+  @include line-height(24);
+  display: flex;
+
+  a {
+    color: $text;
+  }
+
+  a:hover {
+    color: $accent;
+  }
+
+}
+
+
+
+
+
+/*------------------------------------**
+  $BUTTONS
+**------------------------------------*/
+
+input[type=button],
+button {
+  -webkit-appearance: none;
+  appearance: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+}
+
+a.button,
+span.button,
+input[type="button"],
+button {
+  @include font-size(14);
+  @include line-height(24);
+  @include transition(all);
+  display: inline-block;
+  border: 1px solid $text-light;
+  line-height: 1;
+  padding: 1.5rem 3rem 1.2rem 3rem;
+  color: $text;
+  background-color: transparent;
+  font-family: $font-alt-bold;
+  text-transform: uppercase;
+
+  &:hover {
+    text-decoration: none;
+    color: $white;
+    border-color: $accent;
+    background-color: $accent;
+  }
+
+}
+
+/* Large variation */
+
+a.button.button--large,
+span.button.button--large,
+input[type="button"].button--large,
+button.button--large {
+  @include font-size(18);
+  @include line-height(22);
+}
+
+
+
+
+
+/*------------------------------------**
+  $PAGINATION
+**------------------------------------*/
+
+.pagination {
+
+  li {
+    display: inline-block;
+  }
+
+  li:before {
+    display: none;
+  }
+
+  li.separate {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  a {
+    @include font-size(14);
+    display: block;
+    border: 1px solid $text-light;
+    padding: 1rem 0.5rem;
+    width: 5rem;
+    color: $text;
+    text-align: center;
+  }
+
+  a.active,
+  a:hover,
+  a:focus {
+    border-color: $accent;
+    color: $white;
+    background-color: $accent;
+    text-decoration: none;
+  }
+
+}

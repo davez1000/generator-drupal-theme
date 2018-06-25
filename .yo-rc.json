@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Dave Brown",
+      "authorEmail": "davez1000@gmail.com",
+      "authorUrl": ""
+    }
+  }
+}

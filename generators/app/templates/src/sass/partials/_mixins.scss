@@ -1,0 +1,38 @@
+/**
+ * MIXINS
+ * Table of contents: Navigate using $TITLE
+ *
+ * general
+ *
+ */
+
+/*------------------------------------**
+  $GENERAL
+**------------------------------------*/
+
+@mixin transition($element) {
+  transition: $element 0.25s ease;
+}
+
+@mixin wrapper {
+  margin: 0 auto;
+  max-width: $wrapper-width;
+  width: 100%;
+}
+
+@mixin container {
+  margin: 0 auto;
+  max-width: $max-width;
+  width: 100%;
+  padding: 0 1em;
+}
+
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue) + px;
+  font-size: ($sizeValue / 10) + rem;
+}
+
+@mixin line-height($sizeValue: 1.6) {
+  line-height: $sizeValue + px;
+  line-height: ($sizeValue / 10) + rem;
+}

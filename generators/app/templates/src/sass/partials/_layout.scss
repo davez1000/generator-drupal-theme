@@ -1,0 +1,98 @@
+/**
+ * LAYOUT
+ * Table of contents: Navigate using $TITLE
+ *
+ * general
+ * header
+ *
+ */
+
+/*------------------------------------**
+  $GENERAL
+**------------------------------------*/
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 2px solid $accent;
+}
+
+.container {
+  @include container;
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+:target:before {
+  display: block;
+  height: 30px;
+  margin-top: -30px;
+  content: "";
+}
+
+
+
+
+
+/*------------------------------------**
+  $HEADER
+**------------------------------------*/
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background-color: #262626;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 15px;
+    width: 101px;
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0;
+  }
+
+  nav li {
+    margin-bottom: 0;
+    padding-left: 1rem;
+  }
+
+  nav li:before {
+    display: none;
+  }
+
+  nav a {
+    @include font-size(14);
+    font-family: $font-alt-bold;
+    text-transform: uppercase;
+    color: $white;
+
+    &:hover {
+      color: $accent;
+      text-decoration: none;
+    }
+
+  }
+
+}

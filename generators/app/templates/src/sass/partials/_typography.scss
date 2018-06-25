@@ -1,0 +1,316 @@
+/**
+ * TYPOGRAPHY
+ * Table of contents: Navigate using $TITLE
+ *
+ * font imports
+ * globals
+ * headings
+ * body (paragraphs, etc)
+ *
+ */
+
+/*------------------------------------**
+  $FONT IMPORTS
+**------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+/*------------------------------------**
+  $GLOBALS
+**------------------------------------*/
+
+html {
+  color: $text;
+  font-size: 62.5%; /* Sets up the Base 10 stuff */
+  font-family: $font;
+}
+
+body {
+  @include transition(font-family);
+  @include font-size(16);
+  color: $text;
+  line-height: 1.286em;
+  font-weight: $book;
+}
+
+p,
+li {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/*------------------------------------**
+  $HEADINGS
+**------------------------------------*/
+
+/* Global headings */
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: $font-alt;
+  text-transform: uppercase;
+  color: $headings;
+}
+
+.h1--alt,
+.h2--alt,
+.h3--alt {
+  display: inline-block;
+  border-top: 1px solid $text;
+  border-bottom: 1px solid $text;
+}
+
+/* Separator headings */
+
+.separator {
+  position: relative;
+  display: inline-block;
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+  text-align: center;
+}
+
+.separator:before,
+.separator:after {
+  position: absolute;
+  top: 45%;
+  z-index: 0;
+  display: block;
+  height: 1px;
+  width: 1000px;
+  background-color: #666;
+  content: "";
+}
+
+.separator:before {
+  right: 100%;
+  margin-right: 15px;
+}
+
+.separator:after {
+  left: 100%;
+  margin-left: 15px;
+}
+
+@include media("<=medium") {
+  .separator {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Heading one */
+
+h1,
+.h1 {
+  @include font-size(48);
+  @include line-height(64);
+  margin-bottom: 4.8rem;
+}
+
+.h1--alt {
+  padding-top: 1.4rem;
+}
+
+/* Heading two */
+
+h2,
+.h2 {
+  @include font-size(36);
+  @include line-height(48);
+  margin-bottom: 3.6rem;
+}
+
+.h2--alt {
+  padding-top: 1.2rem;
+}
+
+/* Heading three */
+
+h3,
+.h3 {
+  @include font-size(24);
+  @include line-height(36);
+  margin-bottom: 2.4rem;
+}
+
+.h3--alt {
+  padding-top: 0.9rem;
+}
+
+/* Heading four */
+
+h4,
+.h4 {
+  @include font-size(18);
+  @include line-height(24);
+  font-family: $font-alt-bold;
+  margin-bottom: 1.8rem;
+  text-transform: uppercase;
+  color: $headings;
+}
+
+.h4--alt {
+  position: relative;
+  display: inline-block;
+
+  &:after {
+    position: absolute;
+    left: 100%;
+    top: calc(50% - 0.4rem);
+    display: block;
+    height: 1px;
+    margin-left: 15px;
+    width: 2000px;
+    background-color: #666;
+    content: "";
+    transform: translateY(-50%);
+  }
+}
+
+/*------------------------------------**
+  $BODY (PARAGRAPHS, ETC)
+**------------------------------------*/
+
+/* paragraphs */
+
+p {
+  @include font-size(22);
+  @include line-height(33);
+  margin-bottom: 2.2rem;
+}
+
+.p--small {
+  @include font-size(16);
+  @include line-height(24);
+  margin-bottom: 1.6rem;
+}
+
+.p--large {
+  @include font-size(36);
+  @include line-height(48);
+  margin-bottom: 3.6rem;
+}
+
+/* global lists */
+
+ul,
+ol {
+  margin-bottom: 0.8rem;
+}
+
+ul ul,
+ul ol,
+ol ul,
+ol ol {
+  margin-left: 30px;
+}
+
+li {
+  @include font-size(16);
+  @include line-height(26);
+  margin-bottom: 0.8rem;
+}
+
+/* unordered list bullets */
+
+ul > li:before {
+  display: inline-block;
+  height: 5px;
+  margin-right: 10px;
+  width: 5px;
+  border-radius: 50%;
+  background-color: $text;
+  content: "";
+  transform: translateY(-50%);
+}
+
+/* ordered list bullets */
+
+ol {
+  counter-reset: count;
+}
+
+ol > li:before {
+  display: inline-block;
+  margin-right: 10px;
+  content: counter(count) ".";
+  counter-increment: count;
+}
+
+/* small */
+
+small,
+.small {
+  @include font-size(16);
+  @include line-height(26);
+  color: $text-light;
+}
+
+/* links */
+
+a {
+  @include transition(all);
+  color: $accent;
+  padding: 1px 4px 2px 4px;
+  text-decoration: none;
+  &:hover,
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+/* strong */
+
+strong,
+b {
+  font-family: $font-alt-bold;
+}
+
+/* blockquote */
+
+blockquote,
+.blockquote {
+  @include font-size(36);
+  @include line-height(48);
+  position: relative;
+  margin-bottom: 3.6rem;
+  padding-left: 25px;
+
+  p,
+  div {
+    @include font-size(36);
+    @include line-height(48);
+    display: inline;
+  }
+
+  /* start/end quotes */
+
+  &:before,
+  &:after {
+    @include font-size(46);
+    position: absolute;
+    padding-top: 4px;
+    display: inline;
+    content: "\201C";
+  }
+
+  &:before {
+    left: 0px;
+  }
+
+  &:after {
+    padding-left: 8px;
+  }
+}
+
+/* blockquote (variation: no citation) */
+
+.blockquote--no-citation {
+  margin-bottom: 2.4rem;
+}

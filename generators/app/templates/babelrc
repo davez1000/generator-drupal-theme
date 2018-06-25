@@ -1,0 +1,16 @@
+{
+  "presets": [
+    // Automatically determines the Babel plugins you need based on your supported environments
+    ["env", { "modules": false }]
+  ],
+  "plugins": [
+    // Draft features not yet part of release spec
+    "transform-object-rest-spread",
+    "transform-class-properties"
+  ],
+  "env": {
+    "test": {
+      "presets": ["env"]
+    }
+  }
+}
